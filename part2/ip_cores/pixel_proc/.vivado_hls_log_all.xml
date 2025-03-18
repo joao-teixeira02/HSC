@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_15 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.765+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_16 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.743+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_17 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.721+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_18 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.701+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.678+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_6 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.535+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_7 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.507+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node add_ln703 mapped to expression  {add c {mul a b}}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.485+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node p_Val2_6 mapped to expression  {add c {mul a b}}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.464+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_8 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.443+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_9 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.423+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_12 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.400+0000" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Root Node r_V_13 mapped to expression  {mul a b}, but failed in bitwidth check." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:27:42.377+0000" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] pixel_proc/pixel_proc.cpp:217: variable-indexed range selection may cause suboptimal QoR." projectName="pixel_proc" solutionName="solution1" date="2024-12-29T04:26:59.870+0000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

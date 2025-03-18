@@ -1,0 +1,1235 @@
+{
+  "Top": "pixel_proc",
+  "RtlTop": "pixel_proc",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "all",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg400",
+    "Speed": "-1"
+  },
+  "HlsSolution": {"Config": [
+      "config_compile -name_max_length=40",
+      "config_schedule -effort=medium",
+      "config_schedule -enable_dsp_full_reg=1",
+      "config_schedule -relax_ii_for_timing=0",
+      "config_schedule -verbose=1",
+      "config_rtl -reset=all",
+      "config_export -description {Pixel processing for 24-bit AXI video stream}",
+      "config_export -display_name {Pixel Processing}",
+      "config_export -format=ip_catalog"
+    ]},
+  "Args": {
+    "video_in": {
+      "index": "0",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "video_axis",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "kinds": ["struct"],
+            "dataType": "aesl_anonymous1",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true,
+            "fields": {
+              "byte0": {
+                "order": "0",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "byte1": {
+                "order": "1",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "byte2": {
+                "order": "2",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              }
+            }
+          },
+          "user": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "video_in",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "video_in",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "video_out": {
+      "index": "1",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "video_axis",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "kinds": ["struct"],
+            "dataType": "aesl_anonymous3",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true,
+            "fields": {
+              "byte0": {
+                "order": "0",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "byte1": {
+                "order": "1",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              },
+              "byte2": {
+                "order": "2",
+                "dataType": "ap_uint",
+                "structImpl": "flat-field",
+                "dataPack": true
+              }
+            }
+          },
+          "user": {
+            "order": "1",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "video_out",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "2",
+            "dataType": "ap_uint",
+            "dataWidth": "1",
+            "interfaceRef": "video_out",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "frames": {
+      "index": "2",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["frames_V"]
+      }
+    },
+    "rows": {
+      "index": "3",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["rows_V"]
+      }
+    },
+    "pixels": {
+      "index": "4",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["pixels_V"]
+      }
+    },
+    "sum_before": {
+      "index": "5",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["sum_before_V"]
+      }
+    },
+    "sum_after": {
+      "index": "6",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["sum_after_V"]
+      }
+    },
+    "values": {
+      "index": "7",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["values_V"]
+      }
+    },
+    "read_done": {
+      "index": "8",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "1",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["read_done_V"]
+      }
+    },
+    "write_ready": {
+      "index": "9",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "1",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["write_ready_V"]
+      }
+    },
+    "shared_memory": {
+      "index": "10",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "ap_uint",
+        "arraySizes": ["256"]
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "7",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "2605",
+    "Uncertainty": "0.875"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 7.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "pixel_proc",
+    "Version": "1.0",
+    "DisplayName": "Pixel_proc",
+    "Revision": "",
+    "Description": "An IP generated by Vivado HLS",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/pixel_proc.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/pixel_proc_add_160ns_160ns_160_2_1.vhd",
+      "impl\/vhdl\/pixel_proc_add_161ns_161ns_161_2_1.vhd",
+      "impl\/vhdl\/pixel_proc_add_161s_161s_161_2_1.vhd",
+      "impl\/vhdl\/pixel_proc_AXILiteS_s_axi.vhd",
+      "impl\/vhdl\/pixel_proc_fcmp_32ns_32ns_1_2_1.vhd",
+      "impl\/vhdl\/pixel_proc_mask_table8.vhd",
+      "impl\/vhdl\/pixel_proc_mul_62ns_8ns_69_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_62s_8ns_70_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_63s_8ns_71_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_64ns_8ns_71_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_64s_8ns_72_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_64s_96s_159_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_65ns_8ns_72_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_65s_96s_160_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mul_66ns_96s_161_6_1.vhd",
+      "impl\/vhdl\/pixel_proc_mux_648_32_1_1.vhd",
+      "impl\/vhdl\/pixel_proc_mux_2569_22_1_1.vhd",
+      "impl\/vhdl\/pixel_proc_mux_2569_32_1_1.vhd",
+      "impl\/vhdl\/pixel_proc_one_half_table9.vhd",
+      "impl\/vhdl\/regslice_core.vhd",
+      "impl\/vhdl\/pixel_proc.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/pixel_proc_add_160ns_160ns_160_2_1.v",
+      "impl\/verilog\/pixel_proc_add_161ns_161ns_161_2_1.v",
+      "impl\/verilog\/pixel_proc_add_161s_161s_161_2_1.v",
+      "impl\/verilog\/pixel_proc_AXILiteS_s_axi.v",
+      "impl\/verilog\/pixel_proc_fcmp_32ns_32ns_1_2_1.v",
+      "impl\/verilog\/pixel_proc_mask_table8.v",
+      "impl\/verilog\/pixel_proc_mask_table8_rom.dat",
+      "impl\/verilog\/pixel_proc_mul_62ns_8ns_69_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_62s_8ns_70_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_63s_8ns_71_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_64ns_8ns_71_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_64s_8ns_72_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_64s_96s_159_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_65ns_8ns_72_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_65s_96s_160_6_1.v",
+      "impl\/verilog\/pixel_proc_mul_66ns_96s_161_6_1.v",
+      "impl\/verilog\/pixel_proc_mux_648_32_1_1.v",
+      "impl\/verilog\/pixel_proc_mux_2569_22_1_1.v",
+      "impl\/verilog\/pixel_proc_mux_2569_32_1_1.v",
+      "impl\/verilog\/pixel_proc_one_half_table9.v",
+      "impl\/verilog\/pixel_proc_one_half_table9_rom.dat",
+      "impl\/verilog\/regslice_core.v",
+      "impl\/verilog\/pixel_proc.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/data\/pixel_proc.mdd",
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/data\/pixel_proc.tcl",
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/src\/xpixel_proc.c",
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/src\/xpixel_proc.h",
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/src\/xpixel_proc_hw.h",
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/src\/xpixel_proc_linux.c",
+      "impl\/misc\/drivers\/pixel_proc_v1_0\/src\/xpixel_proc_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "Subcore": ["impl\/misc\/pixel_proc_ap_fcmp_0_no_dsp_32_ip.tcl"],
+    "DesignXml": "C:\/Users\/PC\/HSC\/part2\/ip_cores\/pixel_proc\/solution1\/.autopilot\/db\/pixel_proc.design.xml",
+    "DebugDir": "C:\/Users\/PC\/HSC\/part2\/ip_cores\/pixel_proc\/solution1\/.debug",
+    "ProtoInst": ["C:\/Users\/PC\/HSC\/part2\/ip_cores\/pixel_proc\/solution1\/.debug\/pixel_proc.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": [{
+        "name": "pixel_proc_ap_fcmp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name pixel_proc_ap_fcmp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Custom CONFIG.result_tlast_behv Null"
+      }]
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "s_axi_AXILiteS video_in video_out",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "s_axi_AXILiteS": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_AXILiteS",
+      "param_prefix": "C_S_AXI_AXILITES",
+      "addr_bits": "11",
+      "registers": [
+        {
+          "offset": "0x10",
+          "name": "frames_V",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of frames_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "frames_V",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of frames_V"
+            }]
+        },
+        {
+          "offset": "0x14",
+          "name": "frames_V_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of frames_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "frames_V_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal frames_V_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x18",
+          "name": "rows_V",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of rows_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "rows_V",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of rows_V"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "rows_V_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of rows_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "rows_V_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal rows_V_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x20",
+          "name": "pixels_V",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of pixels_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "pixels_V",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of pixels_V"
+            }]
+        },
+        {
+          "offset": "0x24",
+          "name": "pixels_V_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of pixels_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "pixels_V_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal pixels_V_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x28",
+          "name": "sum_before_V",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of sum_before_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "sum_before_V",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of sum_before_V"
+            }]
+        },
+        {
+          "offset": "0x2c",
+          "name": "sum_before_V_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of sum_before_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "sum_before_V_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal sum_before_V_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x30",
+          "name": "sum_after_V",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of sum_after_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "sum_after_V",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of sum_after_V"
+            }]
+        },
+        {
+          "offset": "0x34",
+          "name": "sum_after_V_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of sum_after_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "sum_after_V_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal sum_after_V_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x38",
+          "name": "values_V",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of values_V",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "values_V",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of values_V"
+            }]
+        },
+        {
+          "offset": "0x3c",
+          "name": "values_V_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of values_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "values_V_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal values_V_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x40",
+          "name": "read_done_V",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of read_done_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "read_done_V",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 0 to 0 Data signal of read_done_V"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x44",
+          "name": "read_done_V_ctrl",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Control signal of read_done_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "read_done_V_ap_vld",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal read_done_V_ap_vld"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x48",
+          "name": "write_ready_V",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of write_ready_V",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "write_ready_V",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 0 to 0 Data signal of write_ready_V"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        }
+      ],
+      "memories": {
+        "shared_memory_0_V": {
+          "offset": "80",
+          "range": "16"
+        },
+        "shared_memory_1_V": {
+          "offset": "96",
+          "range": "16"
+        },
+        "shared_memory_2_V": {
+          "offset": "112",
+          "range": "16"
+        },
+        "shared_memory_3_V": {
+          "offset": "128",
+          "range": "16"
+        },
+        "shared_memory_4_V": {
+          "offset": "144",
+          "range": "16"
+        },
+        "shared_memory_5_V": {
+          "offset": "160",
+          "range": "16"
+        },
+        "shared_memory_6_V": {
+          "offset": "176",
+          "range": "16"
+        },
+        "shared_memory_7_V": {
+          "offset": "192",
+          "range": "16"
+        },
+        "shared_memory_8_V": {
+          "offset": "208",
+          "range": "16"
+        },
+        "shared_memory_9_V": {
+          "offset": "224",
+          "range": "16"
+        },
+        "shared_memory_10_V": {
+          "offset": "240",
+          "range": "16"
+        },
+        "shared_memory_11_V": {
+          "offset": "256",
+          "range": "16"
+        },
+        "shared_memory_12_V": {
+          "offset": "272",
+          "range": "16"
+        },
+        "shared_memory_13_V": {
+          "offset": "288",
+          "range": "16"
+        },
+        "shared_memory_14_V": {
+          "offset": "304",
+          "range": "16"
+        },
+        "shared_memory_15_V": {
+          "offset": "320",
+          "range": "16"
+        },
+        "shared_memory_16_V": {
+          "offset": "336",
+          "range": "16"
+        },
+        "shared_memory_17_V": {
+          "offset": "352",
+          "range": "16"
+        },
+        "shared_memory_18_V": {
+          "offset": "368",
+          "range": "16"
+        },
+        "shared_memory_19_V": {
+          "offset": "384",
+          "range": "16"
+        },
+        "shared_memory_20_V": {
+          "offset": "400",
+          "range": "16"
+        },
+        "shared_memory_21_V": {
+          "offset": "416",
+          "range": "16"
+        },
+        "shared_memory_22_V": {
+          "offset": "432",
+          "range": "16"
+        },
+        "shared_memory_23_V": {
+          "offset": "448",
+          "range": "16"
+        },
+        "shared_memory_24_V": {
+          "offset": "464",
+          "range": "16"
+        },
+        "shared_memory_25_V": {
+          "offset": "480",
+          "range": "16"
+        },
+        "shared_memory_26_V": {
+          "offset": "496",
+          "range": "16"
+        },
+        "shared_memory_27_V": {
+          "offset": "512",
+          "range": "16"
+        },
+        "shared_memory_28_V": {
+          "offset": "528",
+          "range": "16"
+        },
+        "shared_memory_29_V": {
+          "offset": "544",
+          "range": "16"
+        },
+        "shared_memory_30_V": {
+          "offset": "560",
+          "range": "16"
+        },
+        "shared_memory_31_V": {
+          "offset": "576",
+          "range": "16"
+        },
+        "shared_memory_32_V": {
+          "offset": "592",
+          "range": "16"
+        },
+        "shared_memory_33_V": {
+          "offset": "608",
+          "range": "16"
+        },
+        "shared_memory_34_V": {
+          "offset": "624",
+          "range": "16"
+        },
+        "shared_memory_35_V": {
+          "offset": "640",
+          "range": "16"
+        },
+        "shared_memory_36_V": {
+          "offset": "656",
+          "range": "16"
+        },
+        "shared_memory_37_V": {
+          "offset": "672",
+          "range": "16"
+        },
+        "shared_memory_38_V": {
+          "offset": "688",
+          "range": "16"
+        },
+        "shared_memory_39_V": {
+          "offset": "704",
+          "range": "16"
+        },
+        "shared_memory_40_V": {
+          "offset": "720",
+          "range": "16"
+        },
+        "shared_memory_41_V": {
+          "offset": "736",
+          "range": "16"
+        },
+        "shared_memory_42_V": {
+          "offset": "752",
+          "range": "16"
+        },
+        "shared_memory_43_V": {
+          "offset": "768",
+          "range": "16"
+        },
+        "shared_memory_44_V": {
+          "offset": "784",
+          "range": "16"
+        },
+        "shared_memory_45_V": {
+          "offset": "800",
+          "range": "16"
+        },
+        "shared_memory_46_V": {
+          "offset": "816",
+          "range": "16"
+        },
+        "shared_memory_47_V": {
+          "offset": "832",
+          "range": "16"
+        },
+        "shared_memory_48_V": {
+          "offset": "848",
+          "range": "16"
+        },
+        "shared_memory_49_V": {
+          "offset": "864",
+          "range": "16"
+        },
+        "shared_memory_50_V": {
+          "offset": "880",
+          "range": "16"
+        },
+        "shared_memory_51_V": {
+          "offset": "896",
+          "range": "16"
+        },
+        "shared_memory_52_V": {
+          "offset": "912",
+          "range": "16"
+        },
+        "shared_memory_53_V": {
+          "offset": "928",
+          "range": "16"
+        },
+        "shared_memory_54_V": {
+          "offset": "944",
+          "range": "16"
+        },
+        "shared_memory_55_V": {
+          "offset": "960",
+          "range": "16"
+        },
+        "shared_memory_56_V": {
+          "offset": "976",
+          "range": "16"
+        },
+        "shared_memory_57_V": {
+          "offset": "992",
+          "range": "16"
+        },
+        "shared_memory_58_V": {
+          "offset": "1008",
+          "range": "16"
+        },
+        "shared_memory_59_V": {
+          "offset": "1024",
+          "range": "16"
+        },
+        "shared_memory_60_V": {
+          "offset": "1040",
+          "range": "16"
+        },
+        "shared_memory_61_V": {
+          "offset": "1056",
+          "range": "16"
+        },
+        "shared_memory_62_V": {
+          "offset": "1072",
+          "range": "16"
+        },
+        "shared_memory_63_V": {
+          "offset": "1088",
+          "range": "16"
+        }
+      },
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "11"
+        },
+        "WDATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "11"
+        },
+        "RDATA": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "11",
+        "AWADDR": "11",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    },
+    "video_in": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "video_in",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "24",
+          "Fields": {
+            "byte0": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "byte1": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "byte2": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "24",
+        "TLAST": "1",
+        "TUSER": "1"
+      }
+    },
+    "video_out": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "video_out",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "struct",
+          "Width": "24",
+          "Fields": {
+            "byte0": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "byte1": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            },
+            "byte2": {
+              "Type": "integer unsigned",
+              "Width": "8"
+            }
+          }
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "24",
+        "TLAST": "1",
+        "TUSER": "1"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_AXILiteS_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWADDR": {
+      "dir": "in",
+      "width": "11"
+    },
+    "s_axi_AXILiteS_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_AXILiteS_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARADDR": {
+      "dir": "in",
+      "width": "11"
+    },
+    "s_axi_AXILiteS_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_AXILiteS_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "video_in_TDATA": {
+      "dir": "in",
+      "width": "24"
+    },
+    "video_in_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "video_in_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "video_in_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "video_in_TUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "video_out_TDATA": {
+      "dir": "out",
+      "width": "24"
+    },
+    "video_out_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "video_out_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "video_out_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "video_out_TUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {"ModuleName": "pixel_proc"},
+    "Info": {"pixel_proc": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }},
+    "Metrics": {"pixel_proc": {
+        "Latency": {
+          "LatencyBest": "2605",
+          "LatencyAvg": "2605",
+          "LatencyWorst": "2605",
+          "PipelineII": "2606",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "7.00",
+          "Uncertainty": "0.88",
+          "Estimate": "6.022"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "1280",
+            "Latency": "2603",
+            "PipelineII": "2",
+            "PipelineDepth": "46"
+          }],
+        "Area": {
+          "BRAM_18K": "148",
+          "DSP48E": "124",
+          "FF": "50058",
+          "LUT": "40079",
+          "URAM": "0"
+        }
+      }}
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "pixel_proc",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2024-12-29 04:30:12 +0000",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2020.1"
+  }
+}

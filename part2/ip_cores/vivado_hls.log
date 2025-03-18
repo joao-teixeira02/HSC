@@ -1,0 +1,827 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'PC' on host 'desktop-j0j932b' (Windows NT_amd64 version 6.2) on Sun Dec 29 04:26:33 +0000 2024
+INFO: [HLS 200-10] In directory 'C:/Users/PC/HSC/part2/ip_cores'
+Sourcing Tcl script 'C:/Users/PC/HSC/part2/ip_cores/pixel_proc/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Users/PC/HSC/part2/ip_cores/pixel_proc'.
+INFO: [HLS 200-10] Adding design file 'pixel_proc/pixel_proc.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'pixel_proc/pixel_proc.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'pixel_proc/pixel_proc_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/PC/HSC/part2/ip_cores/pixel_proc/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 40.
+INFO: [XFORM 203-1161] The maximum of name length is set into 40.
+INFO: [HLS 200-10] Analyzing design file 'pixel_proc/pixel_proc.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 885.152 ; gain = 788.887
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 885.152 ; gain = 788.887
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'std::max<float>' into 'pixel_convert_YCrCb2BGR' (pixel_proc/pixel_proc.cpp:138).
+INFO: [XFORM 203-603] Inlining function 'std::max<float>' into 'pixel_convert_YCrCb2BGR' (pixel_proc/pixel_proc.cpp:137).
+INFO: [XFORM 203-603] Inlining function 'std::max<float>' into 'pixel_convert_YCrCb2BGR' (pixel_proc/pixel_proc.cpp:136).
+INFO: [XFORM 203-603] Inlining function 'std::min<float>' into 'pixel_convert_YCrCb2BGR' (pixel_proc/pixel_proc.cpp:138).
+INFO: [XFORM 203-603] Inlining function 'std::min<float>' into 'pixel_convert_YCrCb2BGR' (pixel_proc/pixel_proc.cpp:137).
+INFO: [XFORM 203-603] Inlining function 'std::min<float>' into 'pixel_convert_YCrCb2BGR' (pixel_proc/pixel_proc.cpp:136).
+INFO: [XFORM 203-603] Inlining function 'counters' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:211).
+INFO: [XFORM 203-603] Inlining function 'pixel_convert_BGR2YCrCb' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:215).
+INFO: [XFORM 203-603] Inlining function 'hls::round' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'Context::active' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:225).
+INFO: [XFORM 203-603] Inlining function 'Context::update' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:226).
+INFO: [XFORM 203-603] Inlining function 'Context::active' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:228).
+INFO: [XFORM 203-603] Inlining function 'Context::update' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:229).
+INFO: [XFORM 203-603] Inlining function 'pixel_convert_YCrCb2BGR' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'generic_round<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'hls::round' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'hls::round' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'hls::round' into 'pixel_proc' (pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'generic_copysign<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:211->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'generic_round<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'generic_round<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'generic_round<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'generic_copysign<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:211->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'generic_copysign<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:211->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'generic_copysign<float>' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:211->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_ieee' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:217).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::to_float' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:214->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232).
+INFO: [XFORM 203-603] Inlining function 'fp_struct<float>::data' into 'pixel_proc' (r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:348->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:369->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_copysign.h:14->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_round.h:198->r:/builds/2020.1/continuous/2020_05_27_2902540/src/products/hls/hls_lib/hlsmath/src/c++/roundfloat.cpp:7->pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:26 . Memory (MB): peak = 885.152 ; gain = 788.887
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] pixel_proc/pixel_proc.cpp:217: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:27 . Memory (MB): peak = 885.152 ; gain = 788.887
+INFO: [XFORM 203-1101] Packing variable 'video_out.data' (pixel_proc/pixel_proc.cpp:164) into a 24-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'video_in.data' (pixel_proc/pixel_proc.cpp:163) into a 24-bit variable.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (pixel_proc/pixel_proc.cpp:194) in function 'pixel_proc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (pixel_proc/pixel_proc.cpp:217) in function 'pixel_proc' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (pixel_proc/pixel_proc.cpp:136) in function 'pixel_proc' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.3' (pixel_proc/pixel_proc.cpp:137) in function 'pixel_proc' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.4' (pixel_proc/pixel_proc.cpp:138) in function 'pixel_proc' completely with a factor of 1.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V'  in dimension 1 with a cyclic factor 64.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V'  in dimension 1 with a cyclic factor 64.
+INFO: [XFORM 203-101] Partitioning array 'shared_memory.V' (pixel_proc/pixel_proc.cpp:168) in dimension 1 with a cyclic factor 64.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V'  in dimension 1 with a cyclic factor 64.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V'  in dimension 1 with a cyclic factor 64.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.3' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.4' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.5' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.6' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.7' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.8' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.9' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.10' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.11' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.12' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.13' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.14' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.15' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.16' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.17' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.18' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.19' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.20' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.21' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.22' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.23' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.24' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.25' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.26' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.27' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.28' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.29' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.30' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.31' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.32' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.33' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.34' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.35' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.36' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.37' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.38' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.39' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.40' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.41' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.42' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.43' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.44' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.45' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.46' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.47' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.48' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.49' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.50' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.51' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.52' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.53' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.54' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.55' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.56' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.57' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.58' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.59' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.60' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.61' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.62' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1.histogram.V.63' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.3' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.4' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.5' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.6' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.7' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.8' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.9' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.10' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.11' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.12' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.13' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.14' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.15' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.16' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.17' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.18' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.19' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.20' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.21' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.22' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.23' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.24' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.25' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.26' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.27' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.28' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.29' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.30' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.31' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.32' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.33' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.34' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.35' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.36' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.37' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.38' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.39' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.40' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.41' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.42' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.43' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.44' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.45' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.46' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.47' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.48' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.49' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.50' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.51' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.52' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.53' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.54' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.55' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.56' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.57' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.58' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.59' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.60' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.61' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.62' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2._empty_data.V.63' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.3' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.4' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.5' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.6' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.7' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.8' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.9' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.10' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.11' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.12' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.13' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.14' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.15' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.16' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.17' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.18' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.19' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.20' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.21' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.22' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.23' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.24' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.25' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.26' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.27' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.28' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.29' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.30' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.31' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.32' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.33' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.34' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.35' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.36' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.37' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.38' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.39' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.40' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.41' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.42' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.43' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.44' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.45' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.46' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.47' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.48' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.49' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.50' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.51' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.52' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.53' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.54' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.55' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.56' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.57' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.58' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.59' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.60' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.61' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.62' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy2.histogram.V.63' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.0' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.1' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.2' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.3' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.4' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.5' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.6' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.7' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.8' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.9' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.10' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.11' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.12' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.13' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.14' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.15' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.16' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.17' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.18' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.19' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.20' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.21' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.22' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.23' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.24' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.25' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.26' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.27' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.28' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.29' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.30' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.31' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.32' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.33' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.34' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.35' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.36' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.37' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.38' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.39' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.40' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.41' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.42' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.43' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.44' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.45' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.46' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.47' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.48' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.49' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.50' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.51' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.52' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.53' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.54' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.55' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.56' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.57' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.58' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.59' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.60' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.61' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.62' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy1._empty_data.V.63' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.3' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.5' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.6' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.7' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.8' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.9' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.10' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.11' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.12' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.13' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.14' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.15' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.16' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.17' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.18' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.19' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.20' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.21' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.22' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.23' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.24' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.25' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.26' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.27' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.28' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.29' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.30' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.31' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.32' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.33' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.34' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.35' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.36' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.37' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.38' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.39' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.40' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.41' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.42' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.43' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.44' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.45' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.46' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.47' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.48' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.49' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.50' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.51' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.52' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.53' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.54' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.55' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.56' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.57' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.58' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.59' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.60' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.61' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.62' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1.histogram.V.63' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.3' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.5' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.6' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.7' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.8' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.9' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.10' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.11' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.12' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.13' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.14' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.15' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.16' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.17' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.18' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.19' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.20' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.21' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.22' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.23' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.24' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.25' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.26' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.27' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.28' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.29' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.30' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.31' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.32' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.33' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.34' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.35' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.36' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.37' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.38' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.39' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.40' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.41' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.42' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.43' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.44' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.45' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.46' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.47' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.48' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.49' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.50' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.51' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.52' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.53' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.54' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.55' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.56' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.57' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.58' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.59' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.60' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.61' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.62' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2._empty_data.V.63' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.3' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.5' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.6' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.7' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.8' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.9' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.10' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.11' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.12' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.13' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.14' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.15' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.16' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.17' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.18' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.19' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.20' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.21' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.22' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.23' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.24' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.25' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.26' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.27' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.28' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.29' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.30' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.31' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.32' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.33' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.34' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.35' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.36' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.37' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.38' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.39' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.40' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.41' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.42' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.43' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.44' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.45' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.46' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.47' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.48' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.49' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.50' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.51' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.52' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.53' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.54' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.55' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.56' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.57' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.58' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.59' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.60' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.61' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.62' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy2.histogram.V.63' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.0' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.1' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.2' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.3' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.4' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.5' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.6' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.7' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.8' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.9' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.10' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.11' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.12' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.13' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.14' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.15' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.16' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.17' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.18' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.19' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.20' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.21' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.22' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.23' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.24' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.25' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.26' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.27' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.28' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.29' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.30' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.31' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.32' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.33' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.34' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.35' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.36' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.37' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.38' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.39' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.40' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.41' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.42' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.43' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.44' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.45' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.46' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.47' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.48' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.49' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.50' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.51' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.52' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.53' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.54' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.55' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.56' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.57' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.58' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.59' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.60' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.61' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.62' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy1._empty_data.V.63' in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:152:2) to (pixel_proc/pixel_proc.cpp:224:6) in function 'pixel_proc'... converting 34 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:37:3) to (pixel_proc/pixel_proc.cpp:57:3) in function 'pixel_proc'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:37:3) to (pixel_proc/pixel_proc.cpp:57:3) in function 'pixel_proc'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (pixel_proc/pixel_proc.cpp:232:3) to (pixel_proc/pixel_proc.cpp:243:2) in function 'pixel_proc'... converting 88 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 885.152 ; gain = 788.887
+INTERNAL-INFO: never seen llvm instruction 'specclockdomain'(2150)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:36 ; elapsed = 00:01:07 . Memory (MB): peak = 885.152 ; gain = 788.887
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pixel_proc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pixel_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SYN 201-303] Root Node r_V_13 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_12 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_9 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_8 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node p_Val2_6 mapped to expression  {add c {mul a b}}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node add_ln703 mapped to expression  {add c {mul a b}}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_7 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_6 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_18 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_17 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_16 mapped to expression  {mul a b}, but failed in bitwidth check.
+WARNING: [SYN 201-303] Root Node r_V_15 mapped to expression  {mul a b}, but failed in bitwidth check.
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'select' operation ('select_ln964', pixel_proc/pixel_proc.cpp:217)
+   b  constant 32
+   c  'select' operation ('l', pixel_proc/pixel_proc.cpp:217)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'bitconcatenate' operation ('r.V', pixel_proc/pixel_proc.cpp:121->pixel_proc/pixel_proc.cpp:215)
+   b  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:121->pixel_proc/pixel_proc.cpp:215)
+   c  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:121->pixel_proc/pixel_proc.cpp:215)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:121->pixel_proc/pixel_proc.cpp:215)
+   b  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:121->pixel_proc/pixel_proc.cpp:215)
+   c  'bitconcatenate' operation ('r.V', pixel_proc/pixel_proc.cpp:121->pixel_proc/pixel_proc.cpp:215)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:120->pixel_proc/pixel_proc.cpp:215)
+   b  'bitconcatenate' operation ('r.V', pixel_proc/pixel_proc.cpp:120->pixel_proc/pixel_proc.cpp:215)
+   c  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:120->pixel_proc/pixel_proc.cpp:215)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'bitconcatenate' operation ('r.V', pixel_proc/pixel_proc.cpp:120->pixel_proc/pixel_proc.cpp:215)
+   b  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:120->pixel_proc/pixel_proc.cpp:215)
+   c  'mul' operation ('r.V', pixel_proc/pixel_proc.cpp:120->pixel_proc/pixel_proc.cpp:215)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'select' operation ('select_ln964_3', pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232)
+   b  constant 32
+   c  'select' operation ('l', pixel_proc/pixel_proc.cpp:138->pixel_proc/pixel_proc.cpp:232)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'select' operation ('select_ln964_2', pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232)
+   b  constant 32
+   c  'select' operation ('l', pixel_proc/pixel_proc.cpp:137->pixel_proc/pixel_proc.cpp:232)
+
+INFO: [SYN 201-351] The following objects are mapped to a ternary adder tree.
+   a  'select' operation ('select_ln964_1', pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232)
+   b  constant 32
+   c  'select' operation ('l', pixel_proc/pixel_proc.cpp:136->pixel_proc/pixel_proc.cpp:232)
+
+###	 Num	NTree	NLUT	EssAll	EssLUT	Size	MSize	Lev	MLev	Sel	Phy 
+####	 107	0	71	6610	236	3.3	6	3	5	57	0
+INFO: [SCHED 204-11] Generating True dependence constraints ... 
+INFO: [SCHED 204-11] Generating Auxiliary dependence constraints ... 
+INFO: [SCHED 204-11] Generating Ternary mapping constraints ... 
+INFO: [SCHED 204-11] Generating Lut Grouping constraints ... 
+INFO: [SCHED 204-11] Generating Node latency constraints ... 
+INFO: [SCHED 204-11] Generating Relative time constraints ... 
+INFO: [SCHED 204-11] Generating Protocol constraints ... 
+INFO: [SCHED 204-11] Generating Precedence constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Pipeline constraints ... 
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 46.
+INFO: [SCHED 204-11] Generating DSP mapping constraints ... 
+INFO: [SCHED 204-11] Generating Supporting dependence constraints ... 
+INFO: [SCHED 204-11] Generating Resource constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Latency constraints ... 
+INFO: [SCHED 204-11] Generating Cycle time constraints ... 
+INFO: [SCHED 204-11] Generating Blocking node constraints ... 
+INFO: [SCHED 204-11] Generating Chaining constraints ... 
+INFO: [SCHED 204-11] Generating Operation gating constraints ... 
+INFO: [SCHED 204-11] Generating Variable bound constraints ... 
+INFO: [SCHED 204-11] Generating PHI node constraints ... 
+INFO: [SCHED 204-11] Start checking consistency (resolving sdc graph) ...
+INFO: [SCHED 204-11] Finished checking consistency.
+INFO: [SCHED 204-11] Start scheduling optimization (solving LP) ...
+INFO: [SCHED 204-11] Finished scheduling optimization.
+INFO: [SCHED 204-11] Start constructing STG ...
+INFO: [SCHED 204-11] Finished constructing STG.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 150.247 seconds; current allocated memory: 409.147 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 16.262 seconds; current allocated memory: 430.885 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pixel_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/video_in_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/video_in_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/video_in_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/video_out_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/video_out_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/video_out_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/frames_V' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/rows_V' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/pixels_V' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/sum_before_V' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/sum_after_V' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/values_V' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/read_done_V' to 's_axilite & ap_vld' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/write_ready_V' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_0_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_1_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_2_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_3_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_4_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_5_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_6_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_7_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_8_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_9_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_10_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_11_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_12_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_13_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_14_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_15_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_16_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_17_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_18_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_19_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_20_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_21_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_22_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_23_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_24_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_25_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_26_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_27_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_28_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_29_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_30_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_31_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_32_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_33_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_34_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_35_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_36_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_37_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_38_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_39_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_40_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_41_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_42_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_43_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_44_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_45_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_46_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_47_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_48_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_49_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_50_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_51_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_52_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_53_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_54_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_55_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_56_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_57_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_58_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_59_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_60_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_61_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_62_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pixel_proc/shared_memory_63_V' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pixel_proc' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Bundling port 'frames_V', 'rows_V', 'pixels_V', 'sum_before_V', 'sum_after_V', 'values_V', 'read_done_V', 'write_ready_V', 'shared_memory_0_V', 'shared_memory_1_V', 'shared_memory_2_V', 'shared_memory_3_V', 'shared_memory_4_V', 'shared_memory_5_V', 'shared_memory_6_V', 'shared_memory_7_V', 'shared_memory_8_V', 'shared_memory_9_V', 'shared_memory_10_V', 'shared_memory_11_V', 'shared_memory_12_V', 'shared_memory_13_V', 'shared_memory_14_V', 'shared_memory_15_V', 'shared_memory_16_V', 'shared_memory_17_V', 'shared_memory_18_V', 'shared_memory_19_V', 'shared_memory_20_V', 'shared_memory_21_V', 'shared_memory_22_V', 'shared_memory_23_V', 'shared_memory_24_V', 'shared_memory_25_V', 'shared_memory_26_V', 'shared_memory_27_V', 'shared_memory_28_V', 'shared_memory_29_V', 'shared_memory_30_V', 'shared_memory_31_V', 'shared_memory_32_V', 'shared_memory_33_V', 'shared_memory_34_V', 'shared_memory_35_V', 'shared_memory_36_V', 'shared_memory_37_V', 'shared_memory_38_V', 'shared_memory_39_V', 'shared_memory_40_V', 'shared_memory_41_V', 'shared_memory_42_V', 'shared_memory_43_V', 'shared_memory_44_V', 'shared_memory_45_V', 'shared_memory_46_V', 'shared_memory_47_V', 'shared_memory_48_V', 'shared_memory_49_V', 'shared_memory_50_V', 'shared_memory_51_V', 'shared_memory_52_V', 'shared_memory_53_V', 'shared_memory_54_V', 'shared_memory_55_V', 'shared_memory_56_V', 'shared_memory_57_V', 'shared_memory_58_V', 'shared_memory_59_V', 'shared_memory_60_V', 'shared_memory_61_V', 'shared_memory_62_V' and 'shared_memory_63_V' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-104] Estimated max fanout for 'pixel_proc' is 36743 from HDL expression: ap_rst_n_inv
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_add_160ns_160ns_160_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_add_161ns_161ns_161_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_add_161s_161s_161_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_fcmp_32ns_32ns_1_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_62ns_8ns_69_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_62s_8ns_70_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_63s_8ns_71_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_64ns_8ns_71_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_64s_8ns_72_6_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_64s_96s_159_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_65ns_8ns_72_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_65s_96s_160_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mul_66ns_96s_161_6_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mux_2569_22_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mux_2569_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'pixel_proc_mux_648_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pixel_proc'.
+INFO: [HLS 200-111]  Elapsed time: 20.723 seconds; current allocated memory: 457.896 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 166.06 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_62ns_8ns_69_6_1_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_65ns_8ns_72_6_1_MulnS_1'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_64ns_8ns_71_6_1_MulnS_2'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_62s_8ns_70_6_1_MulnS_3'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_64s_8ns_72_6_1_MulnS_4'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_63s_8ns_71_6_1_MulnS_5'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_66ns_96s_161_6_1_MulnS_6'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_65s_96s_160_6_1_MulnS_7'
+INFO: [RTMG 210-282] Generating pipelined core: 'pixel_proc_mul_64s_96s_159_6_1_MulnS_8'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'pixel_proc_add_161ns_161ns_161_2_1_AddSubnS_0'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'pixel_proc_add_160ns_160ns_160_2_1_AddSubnS_1'
+INFO: [RTMG 210-283] Generating pipelined adder/subtractor : 'pixel_proc_add_161s_161s_161_2_1_AddSubnS_2'
+INFO: [RTMG 210-279] Implementing memory 'pixel_proc_mask_table8_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'pixel_proc_one_half_table9_rom' using distributed ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:54 ; elapsed = 00:03:40 . Memory (MB): peak = 885.152 ; gain = 788.887
+INFO: [VHDL 208-304] Generating VHDL RTL for pixel_proc.
+INFO: [VLOG 209-307] Generating Verilog RTL for pixel_proc.
+INFO: [HLS 200-112] Total elapsed time: 220.452 seconds; peak allocated memory: 457.896 MB.
